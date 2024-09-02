@@ -1,0 +1,51 @@
+/* Reseteo global de márgenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal de la sección de redes */
+.networksContainer {
+    background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%); /* Fondo con gradiente */
+    padding: 50px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para mayor profundidad */
+    max-width: 900px;
+    margin: auto; /* Centra el contenedor */
+    text-align: center; /* Centra el texto */
+}
+
+/* Descripción de la sección */
+.networksDescription {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Contenedor para los enlaces */
+.linksContainer {
+    display: flex;
+    flex-direction: column; /* Enlaces en columna */
+    gap: 20px; /* Espacio entre los enlaces */
+}
+
+/* Estilo para cada enlace */
+.link {
+    display: block;
+    font-size: 18px;
+    color: #ffffff; /* Texto blanco */
+    background-color: #0073e6; /* Fondo azul */
+    text-decoration: none; /* Sin subrayado */
+    padding: 15px 25px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para los enlaces en hover */
+.link:hover {
+    background-color: #005bb5; /* Color de fondo más oscuro */
+    transform: translateY(-2px); /* Levanta ligeramente el enlace */
+}

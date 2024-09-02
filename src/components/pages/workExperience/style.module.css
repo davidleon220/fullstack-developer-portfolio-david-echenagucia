@@ -1,0 +1,71 @@
+/* Reseteo global de márgenes y relleno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal de la sección de experiencia laboral */
+.workExperienceContainer {
+    max-width: 1000px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro para destacar el contenido */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+
+/* Estilo del encabezado */
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para la lista de experiencias */
+.experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las tarjetas de experiencia */
+}
+
+/* Estilo para cada tarjeta de experiencia */
+.experienceCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+}
+
+/* Estilo para cada elemento de experiencia */
+.experienceDate, .experienceTitle, .experienceDescription, .experienceLanguages {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el botón */
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro en hover */
+    transform: scale(1.05); /* Escala ligera en hover */
+}

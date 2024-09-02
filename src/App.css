@@ -1,0 +1,48 @@
+/* Estilo para el contenedor principal del menú */
+.menu {
+  background-color: #282c34; /* Color de fondo oscuro */
+  padding: 15px 30px; /* Espaciado alrededor del menú */
+  border-bottom: 2px solid #61dafb; /* Línea inferior para resaltar el menú */
+}
+
+/* Estilo para el contenedor de navegación */
+nav {
+  display: flex;
+  justify-content: center; /* Centra el menú horizontalmente */
+}
+
+/* Estilo para la lista de elementos del menú */
+.ulcontainer {
+  display: flex;
+  list-style-type: none; /* Elimina las viñetas de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para cada ítem de menú */
+.ulcontainer li {
+  margin: 0 20px; /* Espaciado entre los ítems del menú */
+}
+
+/* Estilo para los enlaces del menú */
+.ulcontainer a {
+  color: #61dafb; /* Color de texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita en el texto */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transición suave para el color y el borde */
+  padding: 5px 0; /* Espaciado interno */
+}
+
+/* Estilo para el enlace en hover */
+.ulcontainer a:hover {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff; /* Agrega un borde inferior al hacer hover */
+}
+
+/* Estilo para el enlace activo */
+.ulcontainer a.active {
+  color: #ffffff; /* Color del texto activo */
+  border-bottom: 2px solid #ffffff; /* Borde inferior para el enlace activo */
+  padding-bottom: 5px; /* Espaciado interno adicional para el enlace activo */
+}
