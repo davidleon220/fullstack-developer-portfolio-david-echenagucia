@@ -18,6 +18,12 @@ Welcome to my online portfolio, designed to showcase my skills and experience in
   
   **Modern Styling**: Applied **CSS** and **CSS Modules** for a visually appealing and responsive design, enhancing the user experience.
 
+## 🌐 **Ver Proyecto en Vercel / View the Project on Vercel**
+
+Puedes ver el proyecto completo y funcional en [Vercel](https://fullstack-developer-portfolio-david-echenagucia.vercel.app/about).
+
+You can view the fully functional project on [Vercel](https://fullstack-developer-portfolio-david-echenagucia.vercel.app/about).
+
 ## 💻 **Tecnologías Utilizadas / Technologies Used**
 
 - **React**: Biblioteca principal para la construcción de la interfaz de usuario.
@@ -44,7 +50,6 @@ This portfolio not only demonstrates my ability to work with **React**, but also
 
 ## 📩 **Contacto / Contact**
 
-Si tienes alguna pregunta o estás interesado en colaborar, no dudes en [contactarme](mailto:davidleonardo220@gmail.com).
+Si tienes alguna pregunta o estás interesado en colaborar, no dudes en [contactarme](mailto:your-email@example.com).
   
-If you have any questions or are interested in collaborating, feel free to [contact me](mailto:davidleonardo220@gmail.com).
-# fullstack-developer-portfolio-david-echenagucia
+If you have any questions or are interested in collaborating, feel free to [contact me](mailto:your-email@example.com).
