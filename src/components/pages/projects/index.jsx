@@ -9,7 +9,7 @@ const Projects = () => {
         <>
             <div className={style.containerprincipal}>
                 <div className={style.container}>
-                    <div className={style.containerProjects}>Proyectos GitHub</div>
+                    <div className={style.containerProjects}>GitHub Projects</div>
                     {data.length > 0 && data.map((element) => (
                         <div key={element.name} className={style.card}>
                             <h2>{element.name}</h2>

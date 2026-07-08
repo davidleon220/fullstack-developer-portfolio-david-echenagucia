@@ -1,51 +1,71 @@
-/* Reseteo global de márgenes y relleno */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Contenedor principal de la sección de redes */
 .networksContainer {
-    background: linear-gradient(135deg, #f4f4f4 0%, #e0e0e0 100%); /* Fondo con gradiente */
-    padding: 50px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para mayor profundidad */
-    max-width: 900px;
-    margin: auto; /* Centra el contenedor */
-    text-align: center; /* Centra el texto */
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Descripción de la sección */
 .networksDescription {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    line-height: 1.6;
 }
 
 /* Contenedor para los enlaces */
 .linksContainer {
     display: flex;
-    flex-direction: column; /* Enlaces en columna */
-    gap: 20px; /* Espacio entre los enlaces */
+    flex-direction: column;
+    gap: 25px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 /* Estilo para cada enlace */
 .link {
-    display: block;
-    font-size: 18px;
-    color: #ffffff; /* Texto blanco */
-    background-color: #0073e6; /* Fondo azul */
-    text-decoration: none; /* Sin subrayado */
-    padding: 15px 25px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    text-decoration: none;
+    padding: 18px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Estilo para los enlaces en hover */
+/* Efecto hover */
 .link:hover {
-    background-color: #005bb5; /* Color de fondo más oscuro */
-    transform: translateY(-2px); /* Levanta ligeramente el enlace */
+    background: linear-gradient(135deg, var(--accent-color), #3b82f6);
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+}
+
+.link::after {
+    content: '→';
+    position: absolute;
+    right: 25px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+}
+
+.link:hover::after {
+    opacity: 1;
+    transform: translateX(0);
 }

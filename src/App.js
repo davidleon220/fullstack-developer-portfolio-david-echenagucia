@@ -1,4 +1,4 @@
-import { Link, Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
+import { NavLink, Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
 import WorkExperience from "./components/pages/workExperience/workExperience";
 import GitHubProjectsContextProvider from "./components/pages/context/contextProvider";
 import "./App.css";
@@ -56,32 +56,34 @@ function App() {
             <nav>
               <ul className="ulcontainer">
                 <li>
-                  <Link to="/about" className="no-underline">About</Link>
+                  <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>About</NavLink>
                 </li>
                 <li>
-                  <Link to="/workExperience" className="no-underline">Work Experience</Link>
+                  <NavLink to="/workExperience" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Work Experience</NavLink>
                 </li>
                 <li>
-                  <Link to="/networks" className="no-underline">Networks</Link>
+                  <NavLink to="/networks" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Networks</NavLink>
                 </li>
                 <li>
-                  <Link to="/api" className="no-underline">Api</Link>
+                  <NavLink to="/api" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Api</NavLink>
                 </li>
                 <li>
-                  <Link to="/projects" className="no-underline">GitHub</Link>
+                  <NavLink to="/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Projects</NavLink>
                 </li>
               </ul>
             </nav>
           </div>
-          <Routes>
-            {/* Redirige a la página de About por defecto */}
-            <Route path="/" element={<Navigate to="/about" />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/api" element={<Api />} />
-            <Route path="/workExperience" element={<WorkExperience experience={experience} />} />
-            <Route path="/networks" element={<Networks />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
+          <div className="app-container">
+            <Routes>
+              {/* Redirige a la página de About por defecto */}
+              <Route path="/" element={<Navigate to="/about" />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/api" element={<Api />} />
+              <Route path="/workExperience" element={<WorkExperience experience={experience} />} />
+              <Route path="/networks" element={<Networks />} />
+              <Route path="/projects" element={<Projects />} />
+            </Routes>
+          </div>
         </Router>
       </GitHubProjectsContextProvider>
     </>

@@ -1,28 +1,33 @@
-/* Estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Contenedor principal de imagen y texto */
 .containerImageAndText {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
     padding: 50px;
-    background-color: #f5f5f5; /* Color de fondo claro */
-    border-radius: 15px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo de la imagen de perfil */
 .image {
     border-radius: 50%;
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    margin-right: 30px; /* Espaciado entre la imagen y el texto */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil alrededor de la imagen */
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); /* Glow cyan sutil */
+    border: 4px solid var(--card-border);
+    transition: transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
 }
 
 /* Estilo del contenedor de texto de presentación */
@@ -30,20 +35,22 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: auto;
-    padding: 20px;
+    max-width: 500px;
 }
 
 /* Estilo de los títulos en la sección de presentación */
 .about h2 {
-    font-size: 2rem;
-    color: #333; /* Color del texto */
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .about h3 {
     font-size: 1.5rem;
-    color: #666;
+    color: var(--accent-color);
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
 /* Estilo del contenedor de descripción */
@@ -55,14 +62,16 @@
 
 /* Estilo del texto de la descripción */
 .textdescription {
-    padding: 20px;
-    width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
-    background-color: #ffffff; /* Fondo blanco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    font-size: 1rem;
-    line-height: 1.5;
+    padding: 30px;
+    width: 100%;
+    border-radius: 15px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* Estilo del contenedor de proyectos */
@@ -71,77 +80,97 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* Estilo de la cuadrícula de proyectos */
 .projectsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px; /* Espaciado entre las tarjetas de proyectos */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
     width: 100%;
-    max-width: 1200px; /* Ancho máximo para contener las columnas */
+    margin-top: 20px;
 }
 
 /* Estilo de cada tarjeta de proyecto */
 .projectCard {
-    background-color: #f0f0f0; /* Fondo gris claro */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo de la tarjeta en hover */
 .projectCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(6, 182, 212, 0.2);
+    border-color: rgba(6, 182, 212, 0.4);
 }
 
 /* Estilo del nombre del proyecto */
 .projectName {
-    font-size: 1.25rem;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 /* Estilo de la descripción del proyecto */
 .projectDescription {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.5;
 }
 
 /* Estilo del lenguaje del proyecto */
 .projectLanguage {
     font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 10px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.projectLanguage strong {
+    color: var(--accent-color);
 }
 
 /* Estilo del enlace del proyecto */
 .projectLink {
-    color: #007bff; /* Color azul claro para el enlace */
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent-color), #3b82f6);
+    padding: 8px 16px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.3s ease;
 }
 
-/* Estilo del enlace del proyecto en hover */
 .projectLink:hover {
-    text-decoration: underline;
-    color: #0056b3; /* Color azul oscuro en hover */
+    opacity: 0.9;
 }
 
 /* Estilo del enlace de más detalles */
 .moredetails {
-    color: #007bff; /* Color azul claro para el enlace */
+    color: var(--accent-color);
     text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
     display: inline-block;
 }
 
-/* Estilo del enlace de más detalles en hover */
 .moredetails:hover {
-    text-decoration: underline;
-    color: #0056b3; /* Color azul oscuro en hover */
+    background: rgba(6, 182, 212, 0.1);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
 }

@@ -1,48 +1,112 @@
-/* Estilo para el contenedor principal del menú */
-.menu {
-  background-color: #282c34; /* Color de fondo oscuro */
-  padding: 15px 30px; /* Espaciado alrededor del menú */
-  border-bottom: 2px solid #61dafb; /* Línea inferior para resaltar el menú */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-color: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #06b6d4;
+  --accent-hover: #22d3ee;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.05);
 }
 
-/* Estilo para el contenedor de navegación */
-nav {
-  display: flex;
-  justify-content: center; /* Centra el menú horizontalmente */
-}
-
-/* Estilo para la lista de elementos del menú */
-.ulcontainer {
-  display: flex;
-  list-style-type: none; /* Elimina las viñetas de la lista */
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.08), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 25%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/* Estilo para cada ítem de menú */
+* {
+  box-sizing: border-box;
+}
+
+/* Glassmorphism Navbar */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.ulcontainer {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
 .ulcontainer li {
-  margin: 0 20px; /* Espaciado entre los ítems del menú */
+  margin: 0;
 }
 
-/* Estilo para los enlaces del menú */
-.ulcontainer a {
-  color: #61dafb; /* Color de texto de los enlaces */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
-  font-size: 18px; /* Tamaño de fuente */
-  font-weight: bold; /* Negrita en el texto */
-  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transición suave para el color y el borde */
-  padding: 5px 0; /* Espaciado interno */
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-/* Estilo para el enlace en hover */
-.ulcontainer a:hover {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff; /* Agrega un borde inferior al hacer hover */
+.nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
 }
 
-/* Estilo para el enlace activo */
-.ulcontainer a.active {
-  color: #ffffff; /* Color del texto activo */
-  border-bottom: 2px solid #ffffff; /* Borde inferior para el enlace activo */
-  padding-bottom: 5px; /* Espaciado interno adicional para el enlace activo */
+.nav-link.active {
+  color: var(--accent-color);
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Global scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }

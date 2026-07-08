@@ -16,22 +16,22 @@ function Api() {
       });
       setImagesInfo(response.data.results);
     } catch (error) {
-      console.error('Error al buscar imagenes: ', error);
-      alert('Oops! Ocurrió un error. Vuelve más tarde :D');
+      console.error('Error searching images: ', error);
+      alert('Oops! An error occurred. Please try again later :D');
     }
   };
 
   return (
     <div className={style.container}>
-      <h1 className={style.title}>Buscador de Imágenes</h1>
+      <h1 className={style.title}>Image Search</h1>
       <div className={style.searchContainer}>
         <input
           className={style.searchInput}
           type='text'
-          placeholder='Buscar imágenes...'
+          placeholder='Search images...'
           onChange={(e) => setUserSearch(e.target.value)}
         />
-        <button onClick={searchImages} className={style.searchButton}>Buscar</button>
+        <button onClick={searchImages} className={style.searchButton}>Search</button>
       </div>
       <div className={style.imagesContainer}>
         {imagesInfo.length > 0 ? (
@@ -44,7 +44,7 @@ function Api() {
             />
           ))
         ) : (
-          <p className={style.noImages}>No se encontraron imágenes.</p>
+          <p className={style.noImages}>No images found.</p>
         )}
       </div>
     </div>

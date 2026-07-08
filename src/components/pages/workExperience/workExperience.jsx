@@ -25,7 +25,7 @@ const WorkExperience = (props) => {
             </div>
 
             <div className={style.btnContainer}>
-                <button className={style.btn} onClick={handleGoBack}>Volver a About</button>
+                <button className={style.btn} onClick={handleGoBack}>Back to About</button>
             </div>
         </div>
     )

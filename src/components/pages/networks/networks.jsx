@@ -4,17 +4,17 @@ const Networks = () => {
     return (
         <div className={style.networksContainer}>
             <p className={style.networksDescription}>
-                Aquí puedes ver varios enlaces donde puedes encontrar información sobre mis trabajos como Freelancer y mi repositorio de GitHub:
+                Here you can find several links where you can see information about my freelance work and my GitHub repository:
             </p>
             <div className={style.linksContainer}>
                 <a href="https://www.upwork.com/freelancers/~01940e33fa24525ccb" className={style.link} target="_blank" rel="noopener noreferrer">
-                    Perfil de Upwork
+                    Upwork Profile
                 </a>
                 <a href="https://www.linkedin.com/in/david-echenagucia-335724160/" className={style.link} target="_blank" rel="noopener noreferrer">
-                    Perfil de LinkedIn
+                    LinkedIn Profile
                 </a>
                 <a href="https://github.com/davidleon220" className={style.link} target="_blank" rel="noopener noreferrer">
-                    Perfil de GitHub
+                    GitHub Profile
                 </a>
             </div>
         </div>
